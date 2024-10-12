@@ -7,6 +7,10 @@
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
+    --cor01:#A58A2C;
+    --cor02:#A56E2C;
+    --cor03:#a5522c;
+    
 }
 
 *{
@@ -17,7 +21,7 @@
 html, body {
     font-family: var(--fonte1);
     min-height: 100vh;
-    background-color: darkgray;
+    background-color:var(--cor01);
 
 }
 
@@ -57,8 +61,6 @@ header footer a {
     font-weight: bolder; /* negrito*/
 }
 
-
-
 section {
     font-family: var(--fonte3);
     font-size: 3.5vw;
@@ -68,13 +70,10 @@ section {
     line-height: 2em; /*espaçamento entre linhas*/
 }
 
-section > p {
-    padding-bottom: 2em;
-}
-
 section.normal {
-    background-color: #a5522c;
-    color: black;   
+    background-color:var(--cor02);
+    color: black; 
+    padding: 5px;  
 }
 
 section.imagem {
@@ -105,9 +104,19 @@ section#img02 {
     background-image: url(../imagens/Mané\ Tico.jpg);
 }
 
-article {
-    background-color: aquamarine;
+.restalracoes {
+    background-color: rgb(103, 103, 226);
+    font-family: var(--fonte2);
+    color: white;
+    font-size: 2vw;
     text-align: center;
+    padding: 5px;
+}
+
+#restalracao > img {
+    width: 200px;
+    height: 300px;
+    padding: 5px;
 }
 
 footer {
