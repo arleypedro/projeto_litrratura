@@ -207,6 +207,7 @@ section#leu > p {
 
 #restalracao > h1 {
     font-size: 3vw;
+    color:var(--cor04);
     text-align: justify;
 }
 
