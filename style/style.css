@@ -7,6 +7,7 @@
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
+    --fonte4: 'Times New Roman', Times, serif
     --cor00:#5bd6e8;  /* Azul mais claro*/
     --cor01:#48cae4;  /* Azul Turquesa: Representa calma, serenidade e criatividade*/
     --cor02:#36a2b8;  /* Azul mais escuro*/
@@ -26,7 +27,7 @@
 }
 
 html {
-    font-family: var(--fonte1);
+    font-family:'Times New Roman', Times, serif;
     min-height: 100vh;
     background-color:var(--cor02);
 }
@@ -39,14 +40,15 @@ body {
 }
 
 header {
+    background-color: var(--cor02);
     color: white;
     text-align: center;
-    padding-top: 5px;  
+    margin: 10px;
 }
 
 header > h1 {
-    font-family: var(--fonte2);
-    padding-top: 0px;
+    font-family: var(--fonte3);
+    padding-top: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     text-transform: uppercase; /* transforma o texto em maiusculo*/
@@ -59,8 +61,13 @@ header > img {
 }
 
 header nav.links {
+    background-color:var(--cor01);
     text-align: left;
-    padding: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    
 }
 header nav >a {
     color: var(--cor03);
@@ -90,7 +97,10 @@ section {
     padding-left: 30px;
     padding-right: 30px;
 }
-*/
+
+section#inicio {
+    text-align: center;
+}
 section.normal {
     background-color:var(--cor02);
     text-indent: 30px;
@@ -142,15 +152,43 @@ section#img04 {
     background-image: url(../imagens/Noite\ Brilhante.jpg);
 }
 
-.biografia {
+section.biografia {
+    display: inline-block;/* inline-block;` pode ter largura e altura definidos. Ele pode ter margens e preenchimentos (padding) aplicados de maneira semelhante a um elemento em bloco.
+    se alinham horizontalmente, podem ficar lado a lado com outros elementos em linha, como texto ou imagens.
+    Eles não quebram a linha, como fariam elementos de bloco.*/
     background-color: var(--cor02);
-    font-family: var(--fonte2);
+    font-family: var(--fonte-padrao);
     color: white;
     font-size: 2vw;
-    text-align: center;
+    text-align: left;
     padding: 5px;
 }
-.biografia#
+
+section#leu > p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.inline-img, .inline-title {
+    display: inline-block;
+    vertical-align: middle; /* Alinha verticalmente no meio */
+}
+
+.inline-img {
+    width: 250px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção */
+    margin-right: 30px; /* Espaçamento entre a imagem e o título */
+}
+
+.inline-title  {
+    font-family: var(--fonte-padrao);
+    font-size: 2em;
+    font-weight: bold;font-style: italic;
+    text-align: center;
+    margin-top: 0px;
+    padding: 15px;
+}
+*/
 .restalracoes {
     background-color: rgb(103, 103, 226);
     font-family: var(--fonte2);
@@ -161,9 +199,15 @@ section#img04 {
 }
 
 #restalracao > img {
-    width: 200px;
-    height: 300px;
-    padding: 5px;
+    width: 25%;
+    height: auto;
+    padding-left: 5vw;
+    
+}
+
+#restalracao > h1 {
+    font-size: 3vw;
+    text-align: justify;
 }
 
 footer {
