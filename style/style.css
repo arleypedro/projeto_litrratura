@@ -7,10 +7,17 @@
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
-    --cor01:#A58A2C;
-    --cor02:#A56E2C;
-    --cor03:#a5522c;
-    
+    --cor00:#5bd6e8;  /* Azul mais claro*/
+    --cor01:#48cae4;  /* Azul Turquesa: Representa calma, serenidade e criatividade*/
+    --cor02:#36a2b8;  /* Azul mais escuro*/
+    --cor03:#7209b7;  /*Roxo Profundo: Evoca mistério, introspecção e luxo*/
+    --cor04:#f5f5f5;  /* cinza claro*/
+    --cor05:#333333;  /* cinza escuro*/
+    --cor06:#ff6b35;  /*Laranja Vibrante: Simboliza energia, entusiasmo e originalidade*/
+    --cor07:#e44c1f;  /*vermelho alaranjado*/
+    --cor08:#2b9348;  /*Verde Musgo: Sugere natureza, crescimento e equilíbrio*/
+    --cor09:#ffb703;  /* Amarelo Solar: Representa otimismo, alegria e vitalidade*/
+    --cor10:#ffdd57;  /* (amarelo vibrante)*/
 }
 
 *{
@@ -18,25 +25,37 @@
     padding: 0px;
 }
 
-html, body {
+html {
     font-family: var(--fonte1);
     min-height: 100vh;
-    background-color:var(--cor01);
+    background-color:var(--cor02);
+}
+
+body {
+    font-family: var(--fonte1);
+    min-height: 100vh;
+    background-color:var(--cor00);
 
 }
 
 header {
     color: white;
     text-align: center;
-    padding: 10px;
+    padding-top: 5px;  
 }
 
 header > h1 {
     font-family: var(--fonte2);
     padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-transform: uppercase; /* transforma o texto em maiusculo*/
     font-variant: small-caps; /*todas as letras maiusculas porem as iniciais maiores*/
-    font-size: 8vw;
+    font-size: 6vw;
+}
+
+header > img {
+    width: 50%;
 }
 
 header nav.links {
@@ -44,7 +63,7 @@ header nav.links {
     padding: 10px;
 }
 header nav >a {
-    color: white;
+    color: var(--cor03);
     font-family: var(--fonte-padrao);
     text-decoration: none;
     font-weight: bold ; 
@@ -54,6 +73,7 @@ header nav >a {
 
 header a:hover, footer a:hover {
     text-decoration: underline;
+    color:var(--cor04)
 }
 
 header footer a {
@@ -64,46 +84,73 @@ header footer a {
 section {
     font-family: var(--fonte3);
     font-size: 3.5vw;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    color: white;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     padding-left: 30px;
-    line-height: 2em; /*espaçamento entre linhas*/
+    padding-right: 30px;
 }
-
+*/
 section.normal {
     background-color:var(--cor02);
-    color: black; 
-    padding: 5px;  
+    text-indent: 30px;
+    color: white; 
+    padding: 10px;  
+}
+
+section.normal >p {
+    background-color:var(--cor02);
+    text-align: justify;
+    text-indent: 30px;
+    color: white; 
+    padding: 10px;  
 }
 
 section.imagem {
-    background-color: rgb(51, 51, 51);
+    background-color: var(--cor00);
     color: white;
+    font-weight: bold ;
     line-height: 1.5em; /*espaçamento entre linhas*/
-    text-indent: 30px;
+    text-indent: 40px;
     text-align: justify;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover;  /*ajusta a imagem de fundo de forma que ela cubra completamente a área disponível, mantendo a proporção original da imagem.*/
+    background-attachment: fixed;/* fixa a imagem de fundo enquanto você rola uma página*/
 }
 
 section.imagem >p {
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.514);
+    display: inline-block;/* inline-block;` pode ter largura e altura definidos. Ele pode ter margens e preenchimentos (padding) aplicados de maneira semelhante a um elemento em bloco.
+    se alinham horizontalmente, podem ficar lado a lado com outros elementos em linha, como texto ou imagens.
+    Eles não quebram a linha, como fariam elementos de bloco.*/
+    padding: 10px;
+    background-color: var(--cor02);
     text-shadow: 1px 1px 0px black;
 }
 
 section#img01 {
-    background-image: url(../imagens/negra.jpg);
-    background-position: right center;
-    
+    background-image: url(../imagens/Zé\ das\ moças.jpg);      
 }
 
 section#img02 {
     background-image: url(../imagens/Mané\ Tico.jpg);
 }
 
+section#img03 {
+    background-image: url(../imagens/negra.jpg);
+}
+
+section#img04 {
+    background-image: url(../imagens/Noite\ Brilhante.jpg);
+}
+
+.biografia {
+    background-color: var(--cor02);
+    font-family: var(--fonte2);
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    padding: 5px;
+}
+.biografia#
 .restalracoes {
     background-color: rgb(103, 103, 226);
     font-family: var(--fonte2);
