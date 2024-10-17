@@ -19,6 +19,7 @@
     --cor08:#2b9348;  /*Verde Musgo: Sugere natureza, crescimento e equilíbrio*/
     --cor09:#ffb703;  /* Amarelo Solar: Representa otimismo, alegria e vitalidade*/
     --cor10:#ffdd57;  /* (amarelo vibrante)*/
+    --cor11:#234463;
 }
 
 *{
@@ -33,23 +34,25 @@ html {
 }
 
 body {
+    margin: 0px;
     font-family: var(--fonte1);
-    min-height: 100vh;
+    min-height: 100vh;  /*define a altura mínima de um elemento para 100% da altura da janela de visualização (viewport).*/
     background-color:var(--cor00);
 
 }
 
 header {
     background-color: var(--cor02);
+    width: 100%;
     color: white;
     text-align: center;
-    margin: 10px;
+    margin: 0px;
 }
 
 header > h1 {
     font-family: var(--fonte3);
     padding-top: 10px;
-    margin-top: 5px;
+    /*margin-top: 0px;*/
     margin-bottom: 5px;
     text-transform: uppercase; /* transforma o texto em maiusculo*/
     font-variant: small-caps; /*todas as letras maiusculas porem as iniciais maiores*/
@@ -61,17 +64,18 @@ header > img {
 }
 
 header nav.links {
-    background-color:var(--cor01);
+    background-color:var(--cor11);
     text-align: left;
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
-    border-radius: 30px;
+    /*border-radius: 30px;*/
     
 }
 header nav >a {
-    color: var(--cor03);
+    color: var(--cor04);
     font-family: var(--fonte-padrao);
+    font-size: 50%;
     text-decoration: none;
     font-weight: bold ; 
     transition-duration: .5s;
@@ -80,7 +84,7 @@ header nav >a {
 
 header a:hover, footer a:hover {
     text-decoration: underline;
-    color:var(--cor04)
+    color:var(--cor01)
 }
 
 header footer a {
